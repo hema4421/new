@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="cdf39921-66ca-4b16-b3ed-303d014663b0" >
+		<http:listener-connection host="localhost" port="8081" />
+	</http:listener-config>
+	<flow name="githubFlow" doc:id="4c7f30a1-3df4-471a-8984-a5daac703775" >
+		<http:listener doc:name="Listener" doc:id="c2a2d09b-9266-437d-bdf8-f2c22b778f24" config-ref="HTTP_Listener_config" path="/github"/>
+		<logger level="INFO" doc:name="Logger" doc:id="859ab2ac-b9ee-406e-b344-33cf4ca9fc90" message="shared project"/>
+		<set-payload value="shared project" doc:name="Set Payload" doc:id="db6efb40-c2b2-4926-91c0-12411bcce8cd" />
+	</flow>
+</mule>
