@@ -1,0 +1,17 @@
+{
+	"Emp":{
+		"title":"develope",
+		"eid":111110,
+		"fname":"Hassen300",
+		"lname":"Alsherif300",
+		"address":{
+			"city":"Jack300",
+			"state":{
+				"name":"wv"
+			},
+		"street":"1000 collins111111",
+		"zip":"26005",
+		"ssn":"999-87-3412"
+		}
+}
+}
